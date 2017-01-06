@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F7B9724C4E91BF4A1DCBEAF /* Pods_DrupalPoweredApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BDC94B8126BDB97E242985 /* Pods_DrupalPoweredApp.framework */; };
 		977BA11E1E1EDF3900784D97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BA11D1E1EDF3900784D97 /* AppDelegate.swift */; };
 		977BA1201E1EDF3900784D97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BA11F1E1EDF3900784D97 /* ViewController.swift */; };
 		977BA1231E1EDF3900784D97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977BA1211E1EDF3900784D97 /* Main.storyboard */; };
 		977BA1251E1EDF3900784D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 977BA1241E1EDF3900784D97 /* Assets.xcassets */; };
 		977BA1281E1EDF3900784D97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977BA1261E1EDF3900784D97 /* LaunchScreen.storyboard */; };
 		977BA1301E1F094A00784D97 /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BA12F1E1F094A00784D97 /* HeadlineCell.swift */; };
+		977BA1321E1FDC4A00784D97 /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BA1311E1FDC4A00784D97 /* Headline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36BDC94B8126BDB97E242985 /* Pods_DrupalPoweredApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrupalPoweredApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90ED4F24CCE168A176719AEC /* Pods-DrupalPoweredApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrupalPoweredApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrupalPoweredApp/Pods-DrupalPoweredApp.release.xcconfig"; sourceTree = "<group>"; };
 		977BA11A1E1EDF3900784D97 /* DrupalPoweredApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrupalPoweredApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BA11D1E1EDF3900784D97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		977BA11F1E1EDF3900784D97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		977BA1271E1EDF3900784D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		977BA1291E1EDF3900784D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977BA12F1E1F094A00784D97 /* HeadlineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
+		977BA1311E1FDC4A00784D97 /* Headline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headline.swift; sourceTree = "<group>"; };
+		E10CF00A4FADC332F74B238E /* Pods-DrupalPoweredApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrupalPoweredApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrupalPoweredApp/Pods-DrupalPoweredApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7B9724C4E91BF4A1DCBEAF /* Pods_DrupalPoweredApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8648BC8F2955FD082DAF9E38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36BDC94B8126BDB97E242985 /* Pods_DrupalPoweredApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		977BA1111E1EDF3900784D97 = {
 			isa = PBXGroup;
 			children = (
 				977BA11C1E1EDF3900784D97 /* DrupalPoweredApp */,
 				977BA11B1E1EDF3900784D97 /* Products */,
+				BD6D7333F53BF2A91CD70774 /* Pods */,
+				8648BC8F2955FD082DAF9E38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +80,18 @@
 				977BA1261E1EDF3900784D97 /* LaunchScreen.storyboard */,
 				977BA1291E1EDF3900784D97 /* Info.plist */,
 				977BA12F1E1F094A00784D97 /* HeadlineCell.swift */,
+				977BA1311E1FDC4A00784D97 /* Headline.swift */,
 			);
 			path = DrupalPoweredApp;
+			sourceTree = "<group>";
+		};
+		BD6D7333F53BF2A91CD70774 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E10CF00A4FADC332F74B238E /* Pods-DrupalPoweredApp.debug.xcconfig */,
+				90ED4F24CCE168A176719AEC /* Pods-DrupalPoweredApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 977BA12C1E1EDF3900784D97 /* Build configuration list for PBXNativeTarget "DrupalPoweredApp" */;
 			buildPhases = (
+				CA72186CB6383FFA2A9DA7F7 /* [CP] Check Pods Manifest.lock */,
 				977BA1161E1EDF3900784D97 /* Sources */,
 				977BA1171E1EDF3900784D97 /* Frameworks */,
 				977BA1181E1EDF3900784D97 /* Resources */,
+				FF76C53ACDA5555B65DEDF62 /* [CP] Embed Pods Frameworks */,
+				838EB78542500458C8431BFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +165,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		838EB78542500458C8431BFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrupalPoweredApp/Pods-DrupalPoweredApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA72186CB6383FFA2A9DA7F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF76C53ACDA5555B65DEDF62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrupalPoweredApp/Pods-DrupalPoweredApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		977BA1161E1EDF3900784D97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +221,7 @@
 				977BA1201E1EDF3900784D97 /* ViewController.swift in Sources */,
 				977BA1301E1F094A00784D97 /* HeadlineCell.swift in Sources */,
 				977BA11E1E1EDF3900784D97 /* AppDelegate.swift in Sources */,
+				977BA1321E1FDC4A00784D97 /* Headline.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +340,9 @@
 		};
 		977BA12D1E1EDF3900784D97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E10CF00A4FADC332F74B238E /* Pods-DrupalPoweredApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 42AK6T8ZRM;
 				INFOPLIST_FILE = DrupalPoweredApp/Info.plist;
@@ -274,7 +355,9 @@
 		};
 		977BA12E1E1EDF3900784D97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90ED4F24CCE168A176719AEC /* Pods-DrupalPoweredApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 42AK6T8ZRM;
 				INFOPLIST_FILE = DrupalPoweredApp/Info.plist;

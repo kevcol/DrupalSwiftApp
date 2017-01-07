@@ -7,5 +7,6 @@ target 'DrupalPoweredApp' do
 
   # Pods for DrupalPoweredApp
 pod 'waterwheel'
+pod 'AlamofireImage', '~> 3.1'
 
 end

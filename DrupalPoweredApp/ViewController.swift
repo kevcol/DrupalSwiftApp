@@ -11,20 +11,45 @@ import waterwheel
 import SwiftyJSON
 import ObjectMapper
 
+public struct FrontpageViewContent: Mappable {
+    var title: String?
+    var body:  String?
+    var contentType: String?
+    var date: String?
+    var image: String?
+    
+    public init?(map: Map) {
+        
+    }
+    
+    mutating public func mapping(map: Map) {
+        title     <- map["title"]
+        body  <- map["body"]
+        contentType <- map["type"]
+        date <- map["created"]
+        image <- map["field_image"]
+    }
+}
+final class ExampleCell: UITableViewCell {
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    }
+
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-
     let urlString = "http://waterwheel-swift.com/frontpage"
     
-    // MARK: - Temp data. Will get from Drupal soon
-    // var headlineImages = ["http://waterwheel-swift.com/sites/default/files/styles/large/public/2017-01/udontsay.jpg", "http://waterwheel-swift.com/sites/default/files/styles/large/public/2017-01/trollGuy.jpg"]
     
     // create an array of dictionaries to hold JSON data
     var headlinesArray: [Dictionary<String, String>] = []
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +66,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 parse(json: json)
             }
         }
-        
-        
-     
     }
     
- 
     
     func parse(json: JSON) {
         for result in json.arrayValue {
@@ -59,12 +80,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             headlinesArray.append(obj)
         }
         
-       // tableView.reloadData()
-       print(headlinesArray)
+       tableView.reloadData()
+       //print(headlinesArray)
     }
     
 
-    // MARK: - Table view data source
+    // MARK: - Table view code
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -75,14 +96,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? HeadlineCell {
-            
-           let headline = headlinesArray[indexPath.row]
+            let headline = headlinesArray[indexPath.row]
             cell.mainLbl.text = headline["title"]
             
             // Setup image
-            let imgURL = "http://waterwheel-swift.com/" + headline["image"]!
+            let imgURL = "http://waterwheel-swift.com" + headline["image"]!
             print("URL STRING BE THIS: \(imgURL)")
             var img: UIImage
             
@@ -101,6 +120,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return HeadlineCell()
         }
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // load nodeVC
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Node") as? NodeViewController {
+            // great success
+            let headline = headlinesArray[indexPath.row]
+
+            vc.selectedTitle = headline["title"]
+            vc.selectedDate = headline["created"]
+            vc.selectedBody = headline["body"]
+            
+            
+            // Setup image
+            let imgURL = "http://waterwheel-swift.com" + headline["image"]!
+            print("URL STRING BE THIS: \(imgURL)")
+            var img: UIImage
+            
+            let url = NSURL(string: imgURL)
+            if let data = NSData(contentsOf: url as! URL) {
+                img = UIImage(data: data as Data)!
+            } else {
+                img = UIImage(named: "photo")!
+            }
+
+            vc.selectedImage = img
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
 
     override func didReceiveMemoryWarning() {

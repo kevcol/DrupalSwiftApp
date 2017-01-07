@@ -16,14 +16,14 @@ class HeadlineCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        mainImg.layer.cornerRadius = 5.0
-        mainImg.clipsToBounds = true
+//        mainImg.layer.cornerRadius = 5.0
+//        mainImg.clipsToBounds = true
     }
     
-    func configureCell(image:UIImage, text: String) {
-        mainImg.image = image
-        mainLbl.text = text
-    }
+//    func configureCell(image:UIImage, text: String) {
+//        mainImg.image = image
+//        mainLbl.text = text
+//    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

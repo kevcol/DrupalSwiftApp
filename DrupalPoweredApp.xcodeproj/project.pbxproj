@@ -14,7 +14,7 @@
 		977BA1251E1EDF3900784D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 977BA1241E1EDF3900784D97 /* Assets.xcassets */; };
 		977BA1281E1EDF3900784D97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977BA1261E1EDF3900784D97 /* LaunchScreen.storyboard */; };
 		977BA1301E1F094A00784D97 /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BA12F1E1F094A00784D97 /* HeadlineCell.swift */; };
-		977BA1321E1FDC4A00784D97 /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BA1311E1FDC4A00784D97 /* Headline.swift */; };
+		97BEAD411E20608C0056D27C /* NodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAD401E20608C0056D27C /* NodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		977BA1271E1EDF3900784D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		977BA1291E1EDF3900784D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977BA12F1E1F094A00784D97 /* HeadlineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
-		977BA1311E1FDC4A00784D97 /* Headline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headline.swift; sourceTree = "<group>"; };
+		97BEAD401E20608C0056D27C /* NodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeViewController.swift; sourceTree = "<group>"; };
 		E10CF00A4FADC332F74B238E /* Pods-DrupalPoweredApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrupalPoweredApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrupalPoweredApp/Pods-DrupalPoweredApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +80,7 @@
 				977BA1261E1EDF3900784D97 /* LaunchScreen.storyboard */,
 				977BA1291E1EDF3900784D97 /* Info.plist */,
 				977BA12F1E1F094A00784D97 /* HeadlineCell.swift */,
-				977BA1311E1FDC4A00784D97 /* Headline.swift */,
+				97BEAD401E20608C0056D27C /* NodeViewController.swift */,
 			);
 			path = DrupalPoweredApp;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 				977BA1201E1EDF3900784D97 /* ViewController.swift in Sources */,
 				977BA1301E1F094A00784D97 /* HeadlineCell.swift in Sources */,
 				977BA11E1E1EDF3900784D97 /* AppDelegate.swift in Sources */,
-				977BA1321E1FDC4A00784D97 /* Headline.swift in Sources */,
+				97BEAD411E20608C0056D27C /* NodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.2.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
   - ObjectMapper (2.2.2)
   - SwiftyJSON (3.1.0)
   - SwiftyUserDefaults (3.0.0)
@@ -10,15 +12,17 @@ PODS:
     - SwiftyUserDefaults
 
 DEPENDENCIES:
+  - AlamofireImage (~> 3.1)
   - waterwheel
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   waterwheel: b9a2a2f78ce869f59b68b743fe20d93c572cc4a9
 
-PODFILE CHECKSUM: c8e008dad4b1458c02dfdc9e554ac6bd56c397a1
+PODFILE CHECKSUM: efbe3148d6c68dbb4bb96b3fc9268c61d4cb4dd4
 
 COCOAPODS: 1.1.0.rc.3
